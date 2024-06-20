@@ -1,0 +1,22 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.div-header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(88, 158, 224);
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+form {
+    width: 20%;
+    border-left: 1%;
+    margin-left: 1%;
+}
