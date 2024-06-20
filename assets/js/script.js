@@ -1,3 +1,4 @@
+
 // Variables
 const APIKey = "ee0f05e96c33243a6586d6b864f507ae";
 let city;

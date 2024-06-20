@@ -20,3 +20,7 @@ form {
     border-left: 1%;
     margin-left: 1%;
 }
+
+button {
+    width: 100%;
+}
