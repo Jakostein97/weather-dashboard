@@ -46,7 +46,14 @@ button {
 }
 
 .card {
-    width: 18rem; /* Width of the card as specified */
+    width: 100%;
+    background-color: rgb(88, 158, 224);
+    color: white;
+}
+
+.sec-card {
+    width: 30%;
+    height: 50%;
 }
 
 @media (max-width: 768px) {
