@@ -1,6 +1,14 @@
+body {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    background-color: #f8f9fa; /* Light background for better contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
-    display: flex;
-    justify-content: center;
     color: white;
 }
 
@@ -8,19 +16,52 @@ h1 {
     display: flex;
     justify-content: center;
     background-color: rgb(88, 158, 224);
-    padding-left: 0%;
-    padding-right: 0%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 1%;
+    width: 100%;
     margin-bottom: 1%;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items at the start */
+    width: 80%;
+    gap: 20px; /* Add some space between form and card */
+}
+
 form {
-    width: 20%;
-    border-left: 1%;
-    margin-left: 1%;
+    width: 100%;
+    max-width: 300px; /* Set a max width for better responsiveness */
 }
 
 button {
     width: 100%;
 }
+
+.card {
+    width: 18rem; /* Width of the card as specified */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+}
+

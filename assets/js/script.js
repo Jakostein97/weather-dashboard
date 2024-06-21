@@ -6,7 +6,8 @@ const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid
 
 // Functions
 function search() {
-    city = document.getElementById("search-city").value;
+
+    city = (document.getElementById("search-city").value) || 'New York';
     const currentWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
 
     fetch(currentWeatherURL)
@@ -35,3 +36,4 @@ function search() {
 // Event Listeners
 
 document.getElementById("btn-search").addEventListener("click", search);
+// search.preventDefault();
