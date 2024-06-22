@@ -6,7 +6,7 @@ const forecastContainer = document.querySelector('.forecast-container');
 
 function search() {
     let city = document.getElementById("search-city").value || 'New York';
-    const currentWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
+    const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
 
     fetch(currentWeatherURL)
         .then(response => response.json())
@@ -37,7 +37,7 @@ function displayCurrentWeather(data) {
 }
 
 function fetchForecast(lat, lon) {
-    const forecastURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
 
     fetch(forecastURL)
         .then(response => response.json())
@@ -91,7 +91,6 @@ function displaySearchButtons(searchHistory) {
     const searchHistoryContainer = document.getElementById('search-history-container');
     searchHistoryContainer.innerHTML = ''; // Clear the container first
 
-    // Create a button for each city in the search history
     searchHistory.forEach(city => {
         const button = document.createElement('button');
         button.textContent = city;
