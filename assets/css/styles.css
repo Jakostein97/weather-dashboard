@@ -1,7 +1,4 @@
 body {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     background-color: #f8f9fa; /* Light background for better contrast */
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,18 +27,29 @@ main {
 
 .main-container {
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    align-items: flex-start; /* Align items at the start */
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 80%;
-    gap: 20px; /* Add some space between form and card */
+    gap: 20px;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
 }
 
 form {
     width: 100%;
-    max-width: 300px; /* Set a max width for better responsiveness */
 }
 
 button {
+    width: 100%;
+}
+
+#search-history-container {
     width: 100%;
 }
 
@@ -51,9 +59,16 @@ button {
     color: white;
 }
 
-.sec-card {
-    width: 30%;
-    height: 50%;
+.weather-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 @media (max-width: 768px) {
@@ -62,13 +77,16 @@ button {
         align-items: center;
     }
 
-    form {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .search-section {
+        width: 100%;
+        max-width: none;
     }
 
     .card {
         margin-top: 20px;
     }
-}
 
+    .forecast-container {
+        justify-content: center;
+    }
+}
